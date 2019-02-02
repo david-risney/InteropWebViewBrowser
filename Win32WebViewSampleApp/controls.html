@@ -1,0 +1,214 @@
+<html class="borderless fill">
+<head>
+<style>
+*,
+*:before,
+*: after{
+	box-sizing: inherit;
+}
+
+html{
+	box-sizing: border-box;
+}
+ing,
+con,
+con img {
+  width: 16px;
+  height: 16px;
+
+
+
+ing {
+  animation: spin 1s ease-in-out infinite;
+
+
+eyframes spin {
+  to { transform: rotate(360deg); }
+
+.borderless {  border: 0; padding: 0; margin: 0 }
+* {
+    outline: none;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 2px auto auto auto 20px auto 1fr auto 20px auto auto 2px;
+  grid-template-rows: auto;
+    grid-template-areas: 
+    ". backButton forwardButton stopButton . addressbarIcon addressbarText addressbarShare . favoritesButton settingsButton .";
+    justify-items: center;
+  align-items: center;
+}
+
+.zIndexBack {
+  z-index: -1;
+}
+.noborder {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.fillWidth {
+  width: 100%;
+}
+
+.depressable {
+  transition: 0.15s;
+}
+
+.depressable:enabled:active {
+  transform: scale(0.90);
+}
+
+#controlBackground {
+  grid-row: 1;
+  grid-column: 1 / 12;
+}
+
+#backButton {
+  grid-area: backButton
+}
+
+#forwardButton {
+  grid-area: forwardButton;
+}
+
+#stopButton {
+  grid-area: stopButton;
+}
+
+#addressbarBorder {
+  grid-row: 1;
+  grid-column: addressbarIcon-start / addressbarShare-end;
+}
+
+#progressRing,
+#favicon {
+  grid-area: addressbarIcon;
+}
+
+#urlInput {
+  grid-area: addressbarText;
+}
+
+#tweet {
+  grid-area: addressbarShare;
+}
+
+#favButton {
+  grid-area: favoritesButton;
+}
+
+#settingsButton {
+  grid-area: settingsButton;
+}
+
+#webview {
+  grid-area: webview;
+}
+
+#controlBackground {
+  background-color: #F2F2F2;
+  height: 44px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.standalonebutton {
+  background-color: #F2F2F2;
+  border: 1px solid rgba(0,0,0,0);
+  height: 40px;
+  width: 40px;
+}
+
+.standalonebutton:enabled:focus,
+.standalonebutton:enabled:hover {
+  background-color: #E0E0E0;
+  border: 1px solid #9a9a9a;
+}
+
+#urlInput {
+  height: 30px;
+  background-color: transparent;
+  font-family: "Segoe UI";
+}
+#addressbarBorder {
+  height: 32px;
+  background-color: white;
+  border: 1px solid #cccccc;
+}
+
+.addressbarButton {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border: 0;
+  padding: 0;
+}
+
+#backButton:disabled {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzkxOTE5MSIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7pyrPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+#backButton:enabled {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7pyrPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+#forwardButton:enabled {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7pyqPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+#forwardButton:disabled {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzkxOTE5MSIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7pyqPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+.refreshButton {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7pysPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+.stopButton {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7qKUPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+#favButton {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7pyoPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+#settingsButton {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxnIGlkPSJzdmdfMSI+CiAgIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMiI+7pySPC90ZXh0PgogIDwvZz4KIDwvZz4KPC9zdmc+);
+}
+
+#tweet {
+  background-position: center;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDx0ZXh0IHhtbDpzcGFjZT0icHJlc2VydmUiIHk9IjI3LjUiIHg9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBzdHJva2Utd2lkdGg9IjAiIHN0cm9rZS1saW5lam9pbj0ibnVsbCIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0iIzAwMDAwMCIgZm9udC1zaXplPSIxNXB4IiBmb250LWZhbWlseT0iU2Vnb2UgTURMMiBBc3NldHMiIGlkPSJzdmdfMyI+7pytPC90ZXh0PgogPC9nPgo8L3N2Zz4=);
+}
+
+#progressRing {
+    background-position: center;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPCEtLSBDcmVhdGVkIHdpdGggU1ZHLWVkaXQgLSBodHRwOi8vc3ZnLWVkaXQuZ29vZ2xlY29kZS5jb20vIC0tPgogPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IHkyPSIwJSIgeDI9IjEwMCUiIHkxPSIwJSIgeDE9IjAlIiBpZD0iZ3JhZDEiPgogICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSJyZ2IoMjU1LCAyNTUsIDI1NSkiLz4KICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2IoMCwgMCwgMCkiLz4KICA8L2xpbmVhckdyYWRpZW50PgogPC9kZWZzPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxlbGxpcHNlIHJ5PSI3IiByeD0iNyIgY3k9IjIwIiBjeD0iMjAiIHN0cm9rZS13aWR0aD0iMnB4IiBzdHJva2U9InVybCgjZ3JhZDEpIiBmaWxsPSJ0cmFuc3BhcmVudCIgaWQ9InN2Z18xIi8+CiA8L2c+Cjwvc3ZnPg==);
+}
+#addressbarBorder { height: 34px; background-color: white; border: lightgray solid 1px }
+</style>
+</head>
+<body class="fill borderless">
+  <div class = "navbar">
+    <div id = "controlBackground" class="fill zIndexBack"></div>
+    <button id = "backButton" class="standalonebutton depressable" title="Go back"></button>
+    <button id = "forwardButton" class="standalonebutton depressable" title="Go forward"></button>
+    <button id = "stopButton" class="standalonebutton depressable" title="Stop loading" data-state="refresh"></button>
+    <span class = "ring" id="progressRing"></span>
+    <img id = "favicon" src="" class="addressbarButton depressable" />
+    <button id = "tweet" title="Tweet about this browser" class="addressbarButton depressable"></button>
+    <div id = "addressbarBorder" class="zIndexBack fillWidth"></div>
+    <input id = "urlInput" type="text" class="win-textbox fillWidth noborder"/>
+    <button id = "favButton" class="navButton favButton standalonebutton depressable" title="View favorites"></button>
+    <button id = "settingsButton" class="navButton settingsButton standalonebutton depressable" title="View settings"></button>
+    </div>
+</body>
+</html>
