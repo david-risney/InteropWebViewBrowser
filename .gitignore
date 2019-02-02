@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/x64/Debug
+/.vs
+/Win32WebViewSampleApp/x64/Debug
+/Debug
+/Release
+/Win32WebViewSampleApp/x64/Release
+/x64/Release
+/Win32WebViewSampleApp/Release
+/Win32WebViewSampleApp/Debug
+*.aps
